@@ -9,13 +9,13 @@ Gem::Specification.new do |s|
   s.authors     = ["Jared Carroll", "Rob Pak"]
   s.email       = ["jared@carbonfive.com", "rob@carbonfive.com"]
   s.homepage    = "http://github.com/carbonfive/spokr"
-  s.summary     = %q{Write a gem summary}
-  s.description = %q{Write a gem description}
+  s.summary     = %q{Ruby client for Spoke API}
+  s.description = %q{}
 
   s.rubyforge_project = "spokr"
 
   s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.test_files    = `git ls-files -- {spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
   s.add_development_dependency 'rspec'
