@@ -1,0 +1,3 @@
+Dir['*.sql'].each do |each|
+  system "mysql -uroot -p spoke_development < #{each}"
+end
