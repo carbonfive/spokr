@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "spokr"
   s.version     = Spokr::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
-  s.homepage    = "http://rubygems.org/gems/spokr"
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.authors     = ["Jared Carroll", "Rob Pak"]
+  s.email       = ["jared@carbonfive.com", "rob@carbonfive.com"]
+  s.homepage    = "http://github.com/carbonfive/spokr"
+  s.summary     = %q{Write a gem summary}
+  s.description = %q{Write a gem description}
 
   s.rubyforge_project = "spokr"
 
@@ -18,4 +18,5 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
+  s.add_development_dependency 'rspec'
 end
