@@ -24,7 +24,7 @@ namespace :spoke do
     
     desc 'Migrate Spoke database' 
     task :migrate do
-      Dir['vendor/spoke/db/*'].each do |file|
+      Dir['vendor/spoke/db/*'].sort.each do |file|
         sh "mysql -uroot spoke_development < #{file}"
       end
     end

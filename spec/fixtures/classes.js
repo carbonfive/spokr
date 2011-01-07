@@ -16,7 +16,7 @@ Forum = {
   states          : ["OK", "STICKY", "INACTIVE", "HIDDEN"],
   initialState    : "OK",
   read            : [ {fromState: ["OK","STICKY", "INACTIVE"], roles:["ANONYMOUS"]} ],
-  create          : ["ADMIN"],
+  create          : ["ANONYMOUS"],
   childClasses    : ["Topic"],
   initialPayload  : { children: 0 },
   aggregator      : function(state, newPost, oldPost) {
@@ -44,7 +44,7 @@ Topic = {
   states          : ["OK", "INACTIVE", "STICKY", "HIDDEN"],
   initialState    : "OK",
   read            : [ {fromState: ["OK","STICKY", "INACTIVE"], roles:["ANONYMOUS"] } ],
-  create          : ["AUTHENTICATED"],
+  create          : ["ANONYMOUS"],
   updateState     : [
                       {fromState: ["OK"], roles:["AUTHENTICATED"], toState: ["STICKY"]},
                       {fromState: ["*"], roles:["PORTAL_ADMIN"], toState: ["*"]}
